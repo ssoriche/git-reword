@@ -1,0 +1,6 @@
+{
+    "packages": [
+        "go@latest",
+        "goreleaser@latest"
+    ]
+}

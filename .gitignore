@@ -1,0 +1,24 @@
+# Go binaries
+/git-reword
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Output of go coverage
+*.out
+
+# Go workspace
+go.work
+go.work.sum
+
+# Goreleaser
+dist/
+
+# Devbox / Nix
+.devbox/
+.nix-*

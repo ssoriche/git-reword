@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: jetify-com/devbox-install-action@v0.12.0
+
+      - name: Vet
+        run: devbox run make vet
+
+      - name: Test
+        run: devbox run make test
+
+      - name: Build
+        run: devbox run make build
